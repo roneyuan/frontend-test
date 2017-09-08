@@ -254,4 +254,8 @@ input {
   line-height: 20px;
   font-size: 12px; }
 
+@media only screen and (max-width: 768px) {
+  #infoWrapper {
+    margin-top: 100px; } }
+
 /*# sourceMappingURL=main.css.map */
