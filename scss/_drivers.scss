@@ -1,0 +1,40 @@
+.driver-image, .driver-name-jobs, .driver-availability {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -2px;
+}
+
+.driver-image {
+  width: 20%;
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.driver-name-jobs {
+  width: 40%;
+
+  .driver-name {
+    color: #dc422c;
+    font-weight: bolder;
+  }
+
+  .driver-job {
+    color: gray;
+  }
+}
+
+.driver-availability {
+  text-align: right;
+  width: 40%;
+
+  .driver-availability-text {
+    font-weight: bolder;
+  }
+
+  .driver-availability-time {
+    color: gray;
+  }
+}

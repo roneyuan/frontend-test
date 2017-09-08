@@ -1,0 +1,28 @@
+$button-text-color: #e06857;
+$button-background-color: #d6d6d6;
+
+.btn {
+  width: 150px;
+  height: 36px;
+  vertical-align: middle;
+  background-color: $button-background-color;
+  border: 0;
+  border-radius: 5px;
+  color: $button-text-color;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+#option-btn {
+  position: absolute;
+  left: 10px;
+  top: 50px;  
+}
+
+#menu-btn {
+  width: 90%
+}

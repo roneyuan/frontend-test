@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GetSwift HTML/CSS Test</title>
+
+    <link charset="utf-8" rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="siteWrapper">
+      <header>
+        <div  id="headerWrapper">
+          <div id="logoWrapper">
+            <a href=""><img src="http://static1.squarespace.com/static/557f72d9e4b07304af0da49f/t/56c202e0d51cd440f4c17fa1/1504220362825/?format=1500w" alt="GetSwift"></a>
+          </div>
+          <div id="navbarWrapper">
+            <!-- Navigation in Desktop -->
+            <nav id="navigation">
+              <div class="nav-selections"><a href="">+ADD</a></div>
+              <div class="nav-selections"><a href="">MAP</a></div>
+              <div class="nav-selections"><a href="">REPORTS</a></div>
+            </nav>
+            <!-- Navigation in Mobile -->
+            <nav id="mobile-navigation">
+              <input type="checkbox" id="navbar-checkbox" />
+              <label for="navbar-checkbox"></label>
+              <ul>
+                <li><a href="">+ADD</a></li>
+                <li><a href="">MAP</a></li>
+                <li><a href="">REPORTS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="content">
+          <div id="infoWrapper" class="content-box col-sm">
+            <div class="info-element" id="search"><input class="input-box" id="search-input" placeholder="search"></div>
+            <div class="info-element" id="menu"><button class="btn" id="menu-btn">MENU</button></div>
+            <div class="info-element info-box" id="drivers">
+              <!-- Use <span id="drivers-count-number">1</span> because we can use JavaScript to render the number from server with the given id -->
+              <div class="info-title">ALL DRIVERS (<span id="drivers-count-number">1</span>)</div>
+              <!--  We can use JavaScript to render multiple information below -->
+              <div class="info-inner-box">
+                <div class="driver-image"><img src="avatar.png" /></div>
+                <div class="driver-name-jobs">
+                  <div class="driver-name">Josh Smith</div>
+                  <div class="driver-job">1 jobs</div>
+                </div>
+                <div class="driver-availability">
+                  <div class="driver-availability-text">Available In</div>
+                  <div class="driver-availability-time">19 minutes</div>
+                </div>
+              </div>
+              <!-- End here -->
+            </div>
+            <div class="info-element info-box" id="jobs">
+              <!-- Use <span id="jobs-count-number">1</span> because we can use JavaScript to render the number from server with the given id-->
+              <div class="info-title">ALL JOBS (<span id="jobs-count-number">1</span>)</div>
+              <!-- We can use JavaScript to render multiple information below -->
+              <div class="info-inner-box">
+                <div class="job-id">2244308</div>
+                <div class="job-status">EN ROUTE</div>
+                <div class="job-location">NYC Warehouse</div>
+                <div class="job-poster">Jonathan Rosham</div>
+                <div class="job-due-time">Due 10 days ago</div>
+                <div class="job-alarm-image"><img src="alarm.png" alt="alarm"></div>
+              </div>
+              <!-- End here -->
+            </div>
+          </div>
+          <div id="mapWrapper" class="content-box col-lg">
+            <div id="map-option">
+              <button class="btn" id="option-btn">OPTION</button>
+            </div>
+            <div id="map-render">
+              <!-- Google Map is rendered here -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+    
+    <script type="text/javascript">
+      function renderMap() {
+        let mapOptions = {
+              center: new google.maps.LatLng(40.7128, -74.0059),
+              zoom: 10
+          }
+        let map = new google.maps.Map(document.getElementById("map-render"), mapOptions);
+      }      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfckK9aEolKY-kwJiprdc_PTUN7vKeQF8&callback=renderMap">
+    </script>
+  </body>
+</html>

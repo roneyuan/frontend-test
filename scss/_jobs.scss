@@ -1,0 +1,44 @@
+.job-id, .job-status {
+	 display: inline-block;
+   margin-left: -2px;
+}
+
+.job-id {
+	width: 50%;
+}
+
+.job-status {
+	width: 50%;
+	text-align: right;
+  font-weight: bolder;
+  color: red;
+}
+
+.job-location {
+	clear: both;
+  color: orange;
+}
+
+.job-poster {
+  color: #15a715;
+}
+
+.job-due-time, .job-alarm-image {
+  display: inline-block;
+  margin-left: -2px;
+}
+
+.job-due-time {
+  color: red;
+  width: 90%;
+}
+
+.job-alarm-image {
+  width: 10%;
+  text-align: right;
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+}
